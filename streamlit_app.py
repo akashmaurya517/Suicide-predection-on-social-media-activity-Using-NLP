@@ -28,8 +28,7 @@ if nav == "Prediction":
     
     text = st.text_area("Enter the Sentence to Check if it is suicidal")
     
-    st.write("try this statement:")
-    st.write(data["text"][7])
+  
 
     from nltk.stem.porter import PorterStemmer
     porter=PorterStemmer()
@@ -77,6 +76,10 @@ if nav == "Prediction":
             st.error("This is a Suicidal sentence")
         else:
             st.success("Good news!\n it is not a Suicidal sentence")
+    
+    if st.checkbox("Need some Example?"):
+        st.write("try this statement:")
+        st.write(data["text"][7])
 
 if nav == "Contribute":
     st.warning("Contribution to the dataset is not developed yet.. that's why no submit button")
