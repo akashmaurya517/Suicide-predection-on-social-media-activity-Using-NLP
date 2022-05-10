@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # app would work faster if you would not read and show the data set
-data= pd.read_csv("data//Suicide_Detection.csv")
-numm = data["Unnamed: 0"][len(data)-1]
-data.drop("Unnamed: 0", axis=1, inplace = True)
+#data= pd.read_csv("data//Suicide_Detection.csv")
+#numm = data["Unnamed: 0"][len(data)-1]
+#data.drop("Unnamed: 0", axis=1, inplace = True)
 
 from pathlib import Path
 
@@ -78,9 +78,9 @@ if nav == "Contribute":
     st.header("Contribute to our dataset")
     text1 = st.text_area("Enter the Sentence")
     label1 = st.selectbox("Select the class",["suicide","non-suicide"],index = 0)
-    if st.button("submit"):
-        #check if we are not reading the dataset
-        add_lst = {"Unnamed: 0": [numm+1], "text":[text1],"class":[label1]}
-        add_lst = pd.DataFrame(add_lst)
-        add_lst.to_csv("data//new_Suicide_Detection.csv",mode='a',header = False,index= False)
-        st.success("Submitted")
+    # if st.button("submit"):
+    #     #check if we are not reading the dataset
+    #     add_lst = {"Unnamed: 0": [numm+1], "text":[text1],"class":[label1]}
+    #     add_lst = pd.DataFrame(add_lst)
+    #     add_lst.to_csv(root/"new_Suicide_Detection.csv",mode='a',header = False,index= False)
+    #     st.success("Submitted")
