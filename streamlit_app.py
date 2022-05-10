@@ -28,7 +28,8 @@ if nav == "Prediction":
     
     text = st.text_area("Enter the Sentence to Check if it is suicidal")
     
-    st.write(f"try this statement:\n {data["text"][7]}")
+    st.write("try this statement:")
+    st.write(data["text"][7])
 
     from nltk.stem.porter import PorterStemmer
     porter=PorterStemmer()
