@@ -61,11 +61,11 @@ if nav == "Prediction":
 
     import pickle
 
-    tfidf_vectorizer = pickle.load(open(root/"tfidf.pickle", "rb"))
+    tfidf_vectorizer = pickle.load(open("tfidf.pickle", "rb"))
     ss2 = tfidf_vectorizer.transform([f_text])
 
     # load the model from disk
-    loaded_model = pickle.load(open(root/"lr_model.sav", 'rb'))
+    loaded_model = pickle.load(open("lr_model.sav", 'rb'))
     result = loaded_model.predict(ss2)
 
     if st.button("Predict"):
