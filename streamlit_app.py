@@ -8,6 +8,10 @@ data= pd.read_csv("data//Suicide_Detection.csv")
 numm = data["Unnamed: 0"][len(data)-1]
 data.drop("Unnamed: 0", axis=1, inplace = True)
 
+from pathlib import Path
+
+root = Path(__file__).parents[1]
+
 st.title("Suicide Predictor")
 st.image("https://cms.qz.com/wp-content/uploads/2018/08/suicide-prediction-animated-final.gif?quality=75&strip=all&w=1200&h=630&crop=1",width = 800)
 nav = st.sidebar.radio("Navigation",["Home","Prediction","Contribute"])
@@ -57,11 +61,11 @@ if nav == "Prediction":
 
     import pickle
 
-    tfidf_vectorizer = pickle.load(open("tfidf.pickle", "rb"))
+    tfidf_vectorizer = pickle.load(open(root/"tfidf.pickle", "rb"))
     ss2 = tfidf_vectorizer.transform([f_text])
 
     # load the model from disk
-    loaded_model = pickle.load(open("lr_model.sav", 'rb'))
+    loaded_model = pickle.load(open(root/"lr_model.sav", 'rb'))
     result = loaded_model.predict(ss2)
 
     if st.button("Predict"):
