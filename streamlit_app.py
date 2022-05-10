@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # app would work faster if you would not read and show the data set
