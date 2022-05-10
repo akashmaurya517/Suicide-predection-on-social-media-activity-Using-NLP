@@ -2,4 +2,4 @@ numpy
 matplotlib
 nltk
 pandas
-scikitlearn
+scikit-learn
