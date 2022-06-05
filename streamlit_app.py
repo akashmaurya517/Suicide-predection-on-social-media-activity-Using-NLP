@@ -116,14 +116,34 @@ if __name__ == "__main__":
             """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col3:
+            st.text("""
+            Applied Data Science 
+            Capstone
+            """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c389a1bc-92fa-4bf6-ae9f-3b49127087a8" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col4:
+            st.text("""
+            Data Analysis with 
+            Python
+            """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2ef7d03d-4263-45c9-9a94-9f4b16f656fc" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col5:
+            st.text("""
+            Data Visualization with 
+            Python
+            """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="47e710e8-35b4-4bda-b2b7-dde82ac82570" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col6:
+            st.text("""
+            Machine Learning with 
+            Python
+            """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9c81971e-e2b0-4c16-beef-7d35609723f5" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col7:
+            st.text("""
+            Databases and SQL for 
+            Data Science
+            """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f884aac7-0b7d-4e60-9d10-d81f2d00f8eb" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
     
     
