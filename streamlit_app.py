@@ -104,11 +104,13 @@ if __name__ == "__main__":
         col4, col5, col6 = st.columns(3)
         col7, col8, col9 = st.columns(3)
         with col1:
-            st.text("""Data Science Professional
-            Certificate""")
+            st.text("""
+            Data Science Professional
+            Certificate
+            """)
             components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c71eb334-9ced-4463-955d-dded93f6f364" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col2:
-            st.tetx("""
+            st.text("""
             Applied Data Science 
             Specialization
             """)
