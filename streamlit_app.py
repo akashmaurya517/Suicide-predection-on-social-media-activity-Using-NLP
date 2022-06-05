@@ -20,11 +20,6 @@ data.drop("Unnamed: 0", axis=1, inplace = True)
 
 from pathlib import Path
 
-# root = Path(__file__).parents[1]
-
-st.title("Suicide Predictor")
-st.image("https://cms.qz.com/wp-content/uploads/2018/08/suicide-prediction-animated-final.gif?quality=75&strip=all&w=1200&h=630&crop=1",width = 800)
-
 # data in home tab
 def home(data):
      # app would work faster if you would not read and show the data set
@@ -36,21 +31,14 @@ def home(data):
 # prediction function    
 def predict(data):
     st.header("Classify a sentence")
-    
     text = st.text_area("Enter the Sentence to Check if it is suicidal")
-    
-  
 
-    
     porter=PorterStemmer()
     def tokenizer_porter(text):
         return [porter.stem(word) for word in text.split()]
 
     text = np.array(tokenizer_porter(text))
-
     
-
-
     def remove_stopwords(lower_tokens):
       filtered_words=[]
       for s in lower_tokens:
@@ -61,16 +49,8 @@ def predict(data):
         filtered_words.append(temp)
       return filtered_words
 
-
     f_text = np.array(remove_stopwords([text])[0])
-
-
-
     f_text = " ".join(f_text)
-
-
-    
-
     tfidf_vectorizer = pickle.load(open("tfidf.pickle", "rb"))
     ss2 = tfidf_vectorizer.transform([f_text])
 
@@ -90,8 +70,10 @@ def predict(data):
 
 
 if __name__ == "__main__":
-    
-    nav = st.sidebar.radio("Navigation",["Home","Prediction","Contribute"])
+    # root = Path(__file__).parents[1]
+    st.title("Suicide Predictor")
+    st.image("https://cms.qz.com/wp-content/uploads/2018/08/suicide-prediction-animated-final.gif?quality=75&strip=all&w=1200&h=630&crop=1",width = 800)
+    nav = st.sidebar.radio("Navigation",["Home",,"Contribute", "About me", "Contact me"])
     if nav == "Home":
         home(data)
 
@@ -109,3 +91,14 @@ if __name__ == "__main__":
         #     add_lst = pd.DataFrame(add_lst)
         #     add_lst.to_csv(root/"new_Suicide_Detection.csv",mode='a',header = False,index= False)
         #     st.success("Submitted")
+    if nav == "About me":
+        st.header("About me")
+        st.write("I am Akash Maurya, Currently serving in Cognizant as a Programmer Analyst Trainee. I am an IBM-certified Data Scientist. I love playing with data and drawing insights for businesses. I am an expert in Python, Machine Learning, Artificial Intelligence, and Data Science. I have been in this industry for the last 4 years. Currently serving as a part-time instructor and Expert of Machine Learning and Artificial Intelligce.")
+        st.write("I am an independent Data Scientist. have experience on varius freelance projects from the field of data science and Machine learning. Deep learning is one of my favorite subject. you can see my achivement at")
+        
+        st.subheader(View my Achivements)
+        st.image(https://www.credly.com/badges/c71eb334-9ced-4463-955d-dded93f6f364/public_url)
+        st.image(https://www.credly.com/badges/838f5fcb-b703-46e6-aecc-dec1942a2b58/public_url)
+        
+    if nav == "Contact me":
+        st.header("Contact me)
