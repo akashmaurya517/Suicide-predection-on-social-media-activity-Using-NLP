@@ -97,8 +97,8 @@ if __name__ == "__main__":
         st.write("I am an independent Data Scientist. have experience on varius freelance projects from the field of data science and Machine learning. Deep learning is one of my favorite subject. you can see my achivement at")
         
         st.subheader('View my Achivements')
-        st.image(https://www.credly.com/badges/c71eb334-9ced-4463-955d-dded93f6f364/public_url)
-        st.image(https://www.credly.com/badges/838f5fcb-b703-46e6-aecc-dec1942a2b58/public_url)
+        st.image("https://www.credly.com/badges/c71eb334-9ced-4463-955d-dded93f6f364/public_url")
+        st.image("https://www.credly.com/badges/838f5fcb-b703-46e6-aecc-dec1942a2b58/public_url")
         
     if nav == "Contact me":
         st.header("Contact me)
