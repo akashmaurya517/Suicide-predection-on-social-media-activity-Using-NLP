@@ -26,8 +26,7 @@ def home(data):
      # app would work faster if you would not read and show the data set
     if st.checkbox("Show Sample Data"):
         st.table(data.head())
-    
-    st.header("Go to sidebar for navigation to prediction")
+   
 
 # prediction function    
 def predict(data):
@@ -77,9 +76,8 @@ if __name__ == "__main__":
     nav = st.sidebar.radio("Navigation",["Home","Contribute", "About me", "Contact me"])
     if nav == "Home":
         home(data)
-
-    if nav == "Prediction":
         predict(data)
+        
 
     if nav == "Contribute":
         st.warning("Contribution to the dataset is not developed yet. that's why no submit button")
