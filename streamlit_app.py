@@ -101,4 +101,4 @@ if __name__ == "__main__":
         st.image("https://www.credly.com/badges/838f5fcb-b703-46e6-aecc-dec1942a2b58/public_url")
         
     if nav == "Contact me":
-        st.header("Contact me)
+        st.header("Contact me")
