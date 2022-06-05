@@ -102,10 +102,22 @@ if __name__ == "__main__":
         #components.iframe("https://docs.streamlit.io/en/latest")
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            components.html("""<div data-iframe-width="150" data-iframe-height="265" data-share-badge-id="c71eb334-9ced-4463-955d-dded93f6f364" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c71eb334-9ced-4463-955d-dded93f6f364" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col2:
-            components.html("""<div data-iframe-width="150" data-iframe-height="150" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+        with col3:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c389a1bc-92fa-4bf6-ae9f-3b49127087a8" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+        with col4:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2ef7d03d-4263-45c9-9a94-9f4b16f656fc" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
       
-        
+        col5, col6, col7, col8 = st.columns(4)
+        with col5:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="47e710e8-35b4-4bda-b2b7-dde82ac82570" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+        with col6:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9c81971e-e2b0-4c16-beef-7d35609723f5" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+        with col7:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f884aac7-0b7d-4e60-9d10-d81f2d00f8eb" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+    
+    
     if nav == "Contact me":
         st.header("Contact me")
