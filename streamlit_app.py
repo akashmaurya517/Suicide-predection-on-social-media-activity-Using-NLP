@@ -73,7 +73,7 @@ if __name__ == "__main__":
     # root = Path(__file__).parents[1]
     st.title("Suicide Predictor")
     st.image("https://cms.qz.com/wp-content/uploads/2018/08/suicide-prediction-animated-final.gif?quality=75&strip=all&w=1200&h=630&crop=1",width = 800)
-    nav = st.sidebar.radio("Navigation",["Home",,"Contribute", "About me", "Contact me"])
+    nav = st.sidebar.radio("Navigation",["Home","Contribute", "About me", "Contact me"])
     if nav == "Home":
         home(data)
 
