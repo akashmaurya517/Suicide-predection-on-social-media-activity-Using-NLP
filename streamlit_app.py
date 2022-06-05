@@ -150,11 +150,11 @@ if __name__ == "__main__":
     if nav == "Contact me":
         st.header("Contact me")
         st.markdown("""
-        **mail id:** akashmaurya517@gmail.com
-        **Contact:** 8115739862, 8172886817
-        **Linkein:** https://www.linkedin.com/in/akash-maurya-347911164/
-        **github:** https://github.com/akashmaurya517
-        **Twitter:** https://twitter.com/Akashma35277748
-        **Credly:** https://www.credly.com/users/akash-maurya.c20a97c8/badges#
+        **mail id:** akashmaurya517@gmail.com\n
+        **Contact:** 8115739862, 8172886817\n
+        **Linkein:** https://www.linkedin.com/in/akash-maurya-347911164\n
+        **github:** https://github.com/akashmaurya517\n
+        **Twitter:** https://twitter.com/Akashma35277748\n
+        **Credly:** https://www.credly.com/users/akash-maurya.c20a97c8/badges#\n
         """)
         
