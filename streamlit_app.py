@@ -10,7 +10,7 @@ data.drop("Unnamed: 0", axis=1, inplace = True)
 
 from pathlib import Path
 
-root = Path(__file__).parents[1]
+# root = Path(__file__).parents[1]
 
 st.title("Suicide Predictor")
 st.image("https://cms.qz.com/wp-content/uploads/2018/08/suicide-prediction-animated-final.gif?quality=75&strip=all&w=1200&h=630&crop=1",width = 800)
