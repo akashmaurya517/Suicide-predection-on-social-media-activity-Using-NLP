@@ -104,7 +104,7 @@ if __name__ == "__main__":
         with col1:
             components.html("""<div data-iframe-width="150" data-iframe-height="265" data-share-badge-id="c71eb334-9ced-4463-955d-dded93f6f364" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
         with col2:
-            components.html("""<div data-iframe-width="150" data-iframe-height="250" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+            components.html("""<div data-iframe-width="150" data-iframe-height="150" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
       
         
     if nav == "Contact me":
