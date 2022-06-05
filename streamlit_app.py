@@ -89,7 +89,7 @@ def predict(data):
         st.write(data["text"][7])
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     
     nav = st.sidebar.radio("Navigation",["Home","Prediction","Contribute"])
     if nav == "Home":
