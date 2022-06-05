@@ -2,6 +2,16 @@ import streamlit as st
 import pandas as pd 
 import matplotlib.pyplot as plt
 import numpy as np 
+from nltk.stem.porter import PorterStemmer
+import pickle
+
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+stops=stopwords.words('english')
+nltk.download('stopwords')
+    
+    
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # app would work faster if you would not read and show the data set
 data= pd.read_csv("Suicide_Detection.csv")
@@ -14,34 +24,31 @@ from pathlib import Path
 
 st.title("Suicide Predictor")
 st.image("https://cms.qz.com/wp-content/uploads/2018/08/suicide-prediction-animated-final.gif?quality=75&strip=all&w=1200&h=630&crop=1",width = 800)
-nav = st.sidebar.radio("Navigation",["Home","Prediction","Contribute"])
-if nav == "Home":
-    
-    # app would work faster if you would not read and show the data set
+
+# data in home tab
+def home(data):
+     # app would work faster if you would not read and show the data set
     if st.checkbox("Show Sample Data"):
         st.table(data.head())
     
     st.header("Go to sidebar for navigation to prediction")
-    
-if nav == "Prediction":
+
+# prediction function    
+def predict(data):
     st.header("Classify a sentence")
     
     text = st.text_area("Enter the Sentence to Check if it is suicidal")
     
   
 
-    from nltk.stem.porter import PorterStemmer
+    
     porter=PorterStemmer()
     def tokenizer_porter(text):
         return [porter.stem(word) for word in text.split()]
 
     text = np.array(tokenizer_porter(text))
 
-    import nltk
-    nltk.download('stopwords')
-    from nltk.corpus import stopwords
-    stops=stopwords.words('english')
-    nltk.download('stopwords')
+    
 
 
     def remove_stopwords(lower_tokens):
@@ -62,7 +69,7 @@ if nav == "Prediction":
     f_text = " ".join(f_text)
 
 
-    import pickle
+    
 
     tfidf_vectorizer = pickle.load(open("tfidf.pickle", "rb"))
     ss2 = tfidf_vectorizer.transform([f_text])
@@ -81,14 +88,24 @@ if nav == "Prediction":
         st.write("try this statement:")
         st.write(data["text"][7])
 
-if nav == "Contribute":
-    st.warning("Contribution to the dataset is not developed yet.. that's why no submit button")
-    st.header("Contribute to our dataset")
-    text1 = st.text_area("Enter the Sentence")
-    label1 = st.selectbox("Select the class",["suicide","non-suicide"],index = 0)
-    # if st.button("submit"):
-    #     #check if we are not reading the dataset
-    #     add_lst = {"Unnamed: 0": [numm+1], "text":[text1],"class":[label1]}
-    #     add_lst = pd.DataFrame(add_lst)
-    #     add_lst.to_csv(root/"new_Suicide_Detection.csv",mode='a',header = False,index= False)
-    #     st.success("Submitted")
+
+if __name__ == __main__:
+    
+    nav = st.sidebar.radio("Navigation",["Home","Prediction","Contribute"])
+    if nav == "Home":
+        home(data)
+
+    if nav == "Prediction":
+        predict(data)
+
+    if nav == "Contribute":
+        st.warning("Contribution to the dataset is not developed yet.. that's why no submit button")
+        st.header("Contribute to our dataset")
+        text1 = st.text_area("Enter the Sentence")
+        label1 = st.selectbox("Select the class",["suicide","non-suicide"],index = 0)
+        # if st.button("submit"):
+        #     #check if we are not reading the dataset
+        #     add_lst = {"Unnamed: 0": [numm+1], "text":[text1],"class":[label1]}
+        #     add_lst = pd.DataFrame(add_lst)
+        #     add_lst.to_csv(root/"new_Suicide_Detection.csv",mode='a',header = False,index= False)
+        #     st.success("Submitted")
