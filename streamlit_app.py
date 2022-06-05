@@ -82,7 +82,7 @@ if __name__ == "__main__":
         predict(data)
 
     if nav == "Contribute":
-        st.warning("Contribution to the dataset is not developed yet.. that's why no submit button")
+        st.warning("Contribution to the dataset is not developed yet. that's why no submit button")
         st.header("Contribute to our dataset")
         text1 = st.text_area("Enter the Sentence")
         label1 = st.selectbox("Select the class",["suicide","non-suicide"],index = 0)
@@ -99,10 +99,12 @@ if __name__ == "__main__":
         
         st.subheader('View my Achivements')
         
-        components.iframe("https://docs.streamlit.io/en/latest")
-        #col1, col2, col3, col4 = st.columns(4)
-        components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c71eb334-9ced-4463-955d-dded93f6f364" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
-        components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+        #components.iframe("https://docs.streamlit.io/en/latest")
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c71eb334-9ced-4463-955d-dded93f6f364" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
+        with col2:
+            components.html("""<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="838f5fcb-b703-46e6-aecc-dec1942a2b58" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>""")
       
         
     if nav == "Contact me":
